@@ -1,0 +1,6 @@
+name: FloatingEyeBorder
+version: '1.0.0'
+main: dev.eyesky.border.EyeBorderPlugin
+api-version: '26.1'
+depend: [FloatingEye]
+description: Дополнение к FloatingEye - команда /eye border, глаз расширяет границу мира.

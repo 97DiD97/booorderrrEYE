@@ -1,0 +1,21 @@
+plugins { id 'java' }
+
+group = 'dev.eyesky'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:26.1.2.build.+'
+    compileOnly files('libs/FloatingEye-1.0.0.jar')
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 25
+}
+
+jar { archiveFileName = "FloatingEyeBorder-${project.version}.jar" }
